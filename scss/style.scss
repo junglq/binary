@@ -1,0 +1,481 @@
+// ПОДКЛЮЧЕНИЕ ШРИФТОВ  =====================================
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+// ПОДКЛЮЧЕНИЕ ШРИФТОВ  =====================================
+
+// ШРИФТ ПО УМОЛЧАНИЮ  =====================================
+$fontFamily: "Lato";
+// ШРИФТ ПО УМОЛЧАНИЮ  =====================================
+
+// ОБНУЛЕНИЕ  =====================================
+@import "null";
+// ОБНУЛЕНИЕ  =====================================
+
+// ПЕРЕМЕННЫЕ =====================================
+$mw: 1100;
+$md1: $mw + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+// ПЕРЕМЕННЫЕ =====================================
+
+// ОБЩИЕ ПАРАМЕТРЫ =====================================
+body {
+	color: #000;
+	font-size: 14px;
+	&.lock {
+		overflow: hidden;
+	}
+}
+// ОБЩИЕ ПАРАМЕТРЫ =====================================
+
+// ОБОЛОЧКА =====================================
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+// ОБОЛОЧКА =====================================
+
+// ОСНОВНАЯ СЕТКА =====================================
+.container {
+	max-width: $mw + px;
+	margin: 0 auto;
+	@media (max-width: $md1+px) {
+		max-width: 970px;
+	}
+	@media (max-width: $md2+px) {
+		max-width: 750px;
+	}
+	@media (max-width: $md3+px) {
+		max-width: none;
+		padding: 0 10px;
+	}
+}
+// ОСНОВНАЯ СЕТКА =====================================
+
+// ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ =====================================
+@import "baguetteBox";
+// ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ =====================================
+
+.btn {
+	display: inline-block;
+	height: 47px;
+	padding: 0px 42px;
+	line-height: 44px;
+	font-size: 16px;
+	letter-spacing: 0.67px;
+	text-transform: uppercase;
+	position: relative;
+	&:after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		transition: all 0.3s linear 0s;
+		transform: scale(0);
+	}
+	&_w {
+		border: 1px solid #fff;
+		color: #fff;
+		&:after {
+			background-color: #fff;
+		}
+	}
+	&_b {
+		border: 1px solid #000;
+		color: #000;
+		&:after {
+			background-color: #000;
+		}
+	}
+	span {
+		position: relative;
+		z-index: 1;
+	}
+	&:hover {
+		&.btn_w {
+			color: #000;
+		}
+		&.btn_b {
+			color: #fff;
+		}
+		&:after {
+			transform: scale(1);
+		}
+	}
+}
+
+.ibg {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	img {
+		width: 0;
+		height: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+.header-block {
+	text-align: center;
+	&__title {
+		font-size: 34px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 8.95px;
+		position: relative;
+		padding: 0px 0px 30px 0px;
+		&:after {
+			content: "";
+			width: 81px;
+			height: 2px;
+			background-color: #000;
+			display: block;
+			position: absolute;
+			left: 50%;
+			bottom: 0;
+			margin: 0px 0px 0px -40.5px;
+		}
+	}
+
+	&__subtitle {
+		padding: 30px 0px 0px 0px;
+		color: #868585;
+		font-size: 14px;
+		line-height: 25px;
+		font-weight: 300;
+		max-width: 690px;
+		margin: 0 auto;
+	}
+}
+
+.content {
+	background-color: #fff;
+	position: relative;
+	z-index: 50;
+}
+
+//MAINBLOCK =================================================
+.mainblock {
+	flex: 1 1 auto;
+	position: relative;
+	padding: 50px 0px;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	height: 100vh;
+	@media screen and (max-width: $md3+px), screen and (max-height: 600px) {
+		padding: 20px 0px;
+	}
+	&__content {
+		z-index: 1;
+		position: relative;
+		flex: 1 1 auto;
+		.container {
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-between;
+		}
+	}
+
+	&__logo {
+	}
+
+	&__text {
+		color: #fff;
+		position: relative;
+		padding: 0px 0px 45px 0px;
+		margin: 30px 0px;
+		&:after {
+			content: "";
+			width: 105px;
+			height: 2px;
+			background-color: #fff;
+			position: absolute;
+			left: 50%;
+			bottom: 0;
+			margin-left: -52.5px;
+		}
+	}
+
+	&__title {
+		font-size: 34px;
+		line-height: 40px;
+		text-transform: uppercase;
+		font-weight: 900;
+		letter-spacing: 5.43px;
+		margin: 0px 0px 10px 0px;
+		@media screen and (max-width: $md3+px), screen and (max-height: 600px) {
+			font-size: 25px;
+			line-height: 30px;
+		}
+	}
+
+	&__subtitle {
+		font-size: 26px;
+		letter-spacing: 4.15px;
+	}
+
+	&__footer {
+		display: inline-flex;
+		flex-direction: column;
+	}
+
+	&__btn {
+		margin: 0px 0px 60px 0px;
+		@media screen and (max-width: $md3+px), screen and (max-height: 600px) {
+			margin: 0px 0px 30px 0px;
+		}
+	}
+
+	&__arrow {
+		position: relative;
+		animation: arrow 2s infinite ease-in-out;
+	}
+
+	&__image {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+}
+
+@keyframes arrow {
+	0% {
+		top: 0;
+	}
+	50% {
+		top: 10px;
+	}
+	100% {
+		top: 0;
+	}
+}
+//MAINBLOCK =================================================
+
+//MENU =================================================
+.menu {
+	padding: 22px 0px;
+	border-bottom: 1px solid #f2f2f2;
+	&_mb {
+		margin: 0px 0px 130px 0px;
+		@media (max-width: $md2+px) {
+			margin: 0px 0px 50px 0px;
+		}
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 30px 0px;
+		}
+	}
+	@media (max-width: $md4+px) {
+		padding: 22px 0px 12px 0px;
+	}
+	&__items {
+	}
+
+	&__list {
+		li {
+			margin: 0px 25px;
+			text-align: center;
+			@media (max-width: $md3+px) {
+				margin: 0px 15px 10px 15px;
+				flex: 0 1 25%;
+			}
+		}
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@media (max-width: $md4+px) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__link {
+		font-size: 15px;
+		color: #c3c3c3;
+		text-transform: uppercase;
+		font-weight: 700;
+		transition: all 0.3s linear 0s;
+		&:hover {
+			color: #ada074;
+		}
+		&_active {
+			color: #ada074;
+		}
+	}
+}
+//MENU =================================================
+
+//ABOUT =================================================
+.about {
+	padding: 0px 0px 60px 0px;
+	@media (max-width: $md3+px) {
+		padding: 0px 0px 10px 0px;
+	}
+	&__header-block {
+		margin: 0px 0px 65px 0px;
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 30px 0px;
+		}
+	}
+	&__body {
+		text-align: center;
+		max-width: 900px;
+		margin: 0 auto;
+	}
+
+	&__row {
+		display: flex;
+		margin: 0px -15px;
+		@media (max-width: $md3+px) {
+			display: block;
+		}
+	}
+
+	&__column {
+		margin: 0px 0px 30px 0px;
+		flex: 0 1 33.333%;
+		padding: 0px 15px;
+	}
+
+	&__item {
+		text-align: center;
+		max-width: 260px;
+		@media (max-width: $md3+px) {
+			max-width: none;
+		}
+	}
+
+	&__icon {
+		width: 92px;
+		height: 92px;
+		border-radius: 50%;
+		border: 1px solid #f2f2f2;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0px 0px 40px 0px;
+		&-l {
+			img {
+				position: relative;
+				left: 5px;
+			}
+		}
+	}
+
+	&__title {
+		margin: 0px 0px 33px 0px;
+		font-size: 22px;
+		text-transform: uppercase;
+		letter-spacing: 3.52px;
+		@media (max-width: $md2+px) {
+			font-size: 18px;
+			margin: 0px 0px 25px 0px;
+		}
+	}
+
+	&__text {
+		font-weight: 300;
+		line-height: 26px;
+		font-size: 14px;
+		color: #868585;
+	}
+}
+
+//ABOUT =================================================
+
+//PORTFOLIO =================================================
+.portfolio {
+	background-color: #f3f3f3;
+	padding: 105px 0px 60px 0px;
+	@media (max-width: $md2+px) {
+		padding: 50px 0px 40px 0px;
+	}
+	&__header-block {
+		margin: 0px 0px 50px 0px;
+		@media (max-width: $md2+px) {
+			margin: 0px 0px 30px 0px;
+		}
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 20px 0px;
+		}
+	}
+
+	&__filter {
+		margin: 0px 0px 135px 0px;
+		@media (max-width: $md2+px) {
+			margin: 0px 0px 50px 0px;
+		}
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 20px 0px;
+		}
+	}
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0px -15px;
+	}
+
+	&__column {
+		padding: 0px 15px;
+		flex: 0 1 50%;
+		margin: 0px 0px 30px 0px;
+		@media (max-width: $md3+px) {
+			flex: 1 1 100%;
+			margin: 0px 0px 20px 0px;
+		}
+	}
+
+	&__item {
+		img {
+			max-width: 100%;
+		}
+	}
+
+	&__footer {
+		text-align: center;
+		padding: 35px 0px 0px 0px;
+		@media (max-width: $md3+px) {
+			padding: 15px 0px 0px 0px;
+		}
+	}
+
+	&__btn {
+	}
+}
+.filter {
+	&__list {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__item {
+		cursor: pointer;
+		color: #3c3c3c;
+		font-size: 15px;
+		text-transform: uppercase;
+		font-weight: 700;
+		margin: 0px 25px;
+		&.active {
+			color: #ada074;
+		}
+		@media (max-width: $md3+px) {
+			margin: 0px 15px;
+		}
+	}
+}
+
+//PORTFOLIO =================================================

@@ -66,6 +66,7 @@ body {
 	line-height: 44px;
 	font-size: 16px;
 	letter-spacing: 0.67px;
+	background-color: transparent;
 	text-transform: uppercase;
 	position: relative;
 	&:after {
@@ -155,6 +156,21 @@ body {
 		max-width: 690px;
 		margin: 0 auto;
 	}
+}
+
+.input {
+	font-size: 16px;
+	border-top: 1px solid #000;
+	background-color: #f8f7f7;
+	padding: 0px 20px;
+	width: 100%;
+	height: 36px;
+}
+
+textarea.input {
+	padding: 10px 20px;
+	resize: none;
+	height: 117px;
 }
 
 .content {
@@ -451,9 +467,6 @@ body {
 			padding: 15px 0px 0px 0px;
 		}
 	}
-
-	&__btn {
-	}
 }
 .filter {
 	&__list {
@@ -479,3 +492,220 @@ body {
 }
 
 //PORTFOLIO =================================================
+
+//PARTNERS =================================================
+
+.partners {
+	background: url(../img/partners/bg.jpg) center / cover no-repeat;
+	padding: 100px 0px 30px 0px;
+	@media (max-width: $md3+px) {
+		padding: 30px 0px 0px 0px;
+	}
+	&__title {
+		font-weight: 300;
+		font-size: 30px;
+		color: #fff;
+		text-align: center;
+		margin: 0px 0px 90px 0px;
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 30px 0px;
+		}
+	}
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+
+	&__column {
+		padding: 0px 50px;
+		margin: 0px 0px 70px 0px;
+		@media (max-width: $md3+px) {
+			padding: 0px 30px;
+			margin: 0px 0px 30px 0px;
+		}
+	}
+}
+
+//CONTACTS =================================================
+
+.contacts {
+	padding: 180px 0px 80px 0px;
+	@media (max-width: $md2+px) {
+		padding: 80px 0px 50px 0px;
+	}
+	@media (max-width: $md3+px) {
+		padding: 30px 0px 30px 0px;
+	}
+	&__header-block {
+		margin: 0px 0px 120px 0px;
+		@media (max-width: $md2+px) {
+			margin: 0px 0px 50px 0px;
+		}
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 30px 0px;
+		}
+	}
+
+	&__body {
+		display: flex;
+		margin: 0px -25px;
+		@media (max-width: $md3+px) {
+			display: block;
+		}
+	}
+
+	&__column {
+		flex: 0 1 50%;
+		padding: 0px 25px;
+	}
+
+	&__form {
+		text-align: right;
+		@media (max-width: $md3+px) {
+			text-align: left;
+			margin: 0px 0px 30px 0px;
+		}
+	}
+
+	&__content {
+		max-width: 260px;
+		@media (max-width: $md3+px) {
+			max-width: none;
+		}
+	}
+
+	&__text {
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 26px;
+		margin: 0px 0px 35px 0px;
+	}
+
+	&__name {
+		font-weight: 700;
+		font-size: 14px;
+		margin: 0px 0px 25px 0px;
+	}
+
+	&__email {
+		font-size: 14px;
+		a {
+			font-weight: 700;
+			color: #000;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+.form-contacts {
+	&__body {
+		display: inline-block;
+		width: 100%;
+		max-width: 385px;
+		@media (max-width: $md3+px) {
+			max-width: none;
+			display: block;
+		}
+	}
+	&__row {
+		display: flex;
+		margin: 0px -15px 70px -15px;
+		@media (max-width: $md3+px) {
+			margin: 0px -15px 30px -15px;
+		}
+		@media (max-width: $md4+px) {
+			display: block;
+		}
+	}
+
+	&__column {
+		flex: 0 1 50%;
+		padding: 0px 15px;
+		@media (max-width: $md4+px) {
+			&:first-child {
+				margin: 0px 0px 30px 0px;
+			}
+		}
+	}
+	&__label {
+		font-size: 14px;
+		font-weight: 700;
+		text-transform: uppercase;
+		text-align: left;
+		margin: 0px 0px 10px 0px;
+	}
+	&__btn.btn {
+		margin: 35px 0px 0px 0px;
+		@media (max-width: $md3+px) {
+			width: 100%;
+			display: block;
+		}
+	}
+}
+.social {
+	margin: 0px 0px 15px 0px;
+	display: flex;
+	&__item {
+		height: 30px;
+		width: 30px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: 2px solid #000;
+		border-radius: 50%;
+		padding: 10px;
+		margin: 0px 15px 0px 0px;
+	}
+}
+
+//CONTACTS =================================================
+
+//FOOTER =================================================
+.footer {
+	position: relative;
+	z-index: 50;
+	background-color: #3c3c3c;
+	padding: 45px 0px;
+	&__body {
+		text-align: center;
+	}
+
+	&__logo {
+		display: inline-block;
+		margin: 0px 0px 40px 0px;
+	}
+
+	&__menu {
+		text-align: center;
+	}
+
+	&__list {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0px 0px 35px 0px;
+		li {
+			margin: 0px 15px;
+		}
+	}
+
+	&__link {
+		color: #a4a4a4;
+		font-weight: 400;
+		font-size: 14px;
+		&:hover {
+			color: #fff;
+		}
+	}
+
+	&__copy {
+		font-size: 14px;
+		color: #6c6c6c;
+	}
+}
+//FOOTER =================================================

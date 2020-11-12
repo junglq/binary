@@ -22,8 +22,6 @@ $(document).ready(function () {
 	// 	}
 	// }
 
-
-
 	// // Filter =======================================
 	// let filter = $("[data-filter]");
 	// filter.on("click", function (event) {
@@ -106,7 +104,6 @@ $(document).ready(function () {
 	}
 	ibg();
 
-
 	// BaguetteBOX
 	baguetteBox.run('.gallery');
 
@@ -122,7 +119,6 @@ $(document).ready(function () {
 		$('.filter__item').removeClass('active');
 		$(this).addClass('active');
 	})
-
 
 	// Smooth scroll
 	$('.goto').click(function () {

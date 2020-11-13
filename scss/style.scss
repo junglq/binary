@@ -478,23 +478,19 @@ textarea.input {
 		.portfolio__body {
 			display: flex;
 			justify-content: space-between;
-			flex-wrap: wrap;
 			margin: 0px -9px;
 			@media (max-width: $md5+px) {
-				justify-content: center;
+				display: block;
 			}
 			.portfolio__items {
 				flex-direction: column;
-				-webkit-flex-direction: column;
 				margin: 0;
+				text-align: center;
 				.portfolio__column {
 					padding: 0px 9px;
 					@media (max-width: $md5+px) {
 						padding: 0;
 					}
-				}
-				@media (max-width: $md5+px) {
-					// order: 1;
 				}
 			}
 			.portfolio__project {
@@ -512,7 +508,7 @@ textarea.input {
 					flex-direction: column;
 					@media (max-width: $md3+px) {
 						padding: 30px 20px;
-						min-height: 500px;
+						min-height: 400px;
 					}
 				}
 				&-title {

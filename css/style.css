@@ -951,16 +951,12 @@ textarea.input {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   margin: 0px -9px;
 }
 
 @media (max-width: 1240px) {
   .portfolio__white .portfolio__body {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    display: block;
   }
 }
 
@@ -970,6 +966,7 @@ textarea.input {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 0;
+  text-align: center;
 }
 
 .portfolio__white .portfolio__body .portfolio__items .portfolio__column {
@@ -1012,7 +1009,7 @@ textarea.input {
 @media (max-width: 767.98px) {
   .portfolio__white .portfolio__body .portfolio__project-body {
     padding: 30px 20px;
-    min-height: 500px;
+    min-height: 400px;
   }
 }
 

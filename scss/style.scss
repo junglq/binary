@@ -485,6 +485,7 @@ textarea.input {
 			}
 			.portfolio__items {
 				flex-direction: column;
+				-webkit-flex-direction: column;
 				margin: 0;
 				.portfolio__column {
 					padding: 0px 9px;
